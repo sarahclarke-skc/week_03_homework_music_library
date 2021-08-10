@@ -50,3 +50,17 @@ def update(album):
     sql = "UPDATE albums SET (title, genre, artist_id) = (%s, %s, %s) WHERE id = %s"
     values = [album.title, album.genre, album.artist_id, album.id]
     run_sql(sql, values)
+
+# (Pdb) album_repository.all_albums_by_artist("Michael Jackson")
+# syntax error at or near "%"
+# LINE 1: SELECT * FROM albums WHERE artist = %s
+
+# def all_albums_by_artist(artist):
+#     albums = []
+#     sql = "SELECT * FROM albums WHERE artist % s"
+#     results = run_sql(sql)
+#     for row in results:
+#         artist = artist_repository.select(row['artist_id'])
+#         album = Album(row['title'], row['genre'], artist, row['id'])
+#         albums.append(album)
+#         return albums

@@ -15,6 +15,8 @@ artist_repository.save(artist1)
 
 album = Album("Bad", "Pop", artist)
 album_repository.save(album)
+album1 = Album("Thriller", "Pop", artist)
+album_repository.save(album1)
 album2 = Album("Blunderbuss", "Rock", artist1)
 album_repository.save(album2)
 
